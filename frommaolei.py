@@ -21,7 +21,7 @@ def set_random_seeds(random_seed=0):
     np.random.seed(random_seed)
     random.seed(random_seed)
 
-def prepare_dataloader(num_workers=8, train_batch_size=128, eval_batch_size=256):
+def prepare_dataloader(num_workers=8, train_batch_size=32, eval_batch_size=32):
 
     train_transform = transforms.Compose([
         transforms.RandomCrop(32, padding=4),
@@ -282,7 +282,7 @@ def main():
     # Create an untrained model.
     model = create_model(num_classes=num_classes)
 
-    train_loader, test_loader = prepare_dataloader(num_workers=8, train_batch_size=128, eval_batch_size=256)
+    train_loader, test_loader = prepare_dataloader(num_workers=8, train_batch_size=32, eval_batch_size=32)
     
     # Train model.
     print("Training Model...")
@@ -306,7 +306,7 @@ def main():
     for module_name, module in fused_model.named_children():
         if "layer" in module_name:
             for basic_block_name, basic_block in module.named_children():
-                torch.quantization.fuse_modules(basic_block, [["conv1", "bn1", "relu"], ["conv2", "bn2"]], inplace=True)
+                torch.quantization.fuse_modules(basic_block, [["conv1", "bn1", "relu1"], ["conv2", "bn2"]], inplace=True)
                 for sub_block_name, sub_block in basic_block.named_children():
                     if sub_block_name == "downsample":
                         torch.quantization.fuse_modules(sub_block, [["0", "1"]], inplace=True)
@@ -319,7 +319,7 @@ def main():
     # Model and fused model should be equivalent.
     model.eval()
     fused_model.eval()
-    # assert model_equivalence(model_1=model, model_2=fused_model, device=cpu_device, rtol=1e-03, atol=1e-06, num_tests=100, input_size=(1,3,32,32)), "Fused model is not equivalent to the original model!"
+    assert model_equivalence(model_1=model, model_2=fused_model, device=cpu_device, rtol=1e-03, atol=1e-06, num_tests=100, input_size=(1,3,32,32)), "Fused model is not equivalent to the original model!"
 
     # Prepare the model for quantization aware training. This inserts observers in
     # the model that will observe activation tensors during calibration.

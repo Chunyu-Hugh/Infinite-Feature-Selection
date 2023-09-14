@@ -1,0 +1,5 @@
+Not a conda environment: /mnt/hpc_projects/cs_chu034/.envs/QAT
+Traceback (most recent call last):
+  File "frommaolei.py", line 4, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'

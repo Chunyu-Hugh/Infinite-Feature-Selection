@@ -1,0 +1,71 @@
+Tue Sep 12 02:21:17 EDT 2023
+2023-09-12 02:21:18.115090: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.1
+2023-09-12 02:21:21.883773: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-09-12 02:21:21.885103: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2023-09-12 02:21:21.886651: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2023-09-12 02:21:22.313400: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3d:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2023-09-12 02:21:22.313781: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 1 with properties: 
+pciBusID: 0000:3e:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2023-09-12 02:21:22.314068: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 2 with properties: 
+pciBusID: 0000:3f:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2023-09-12 02:21:22.314345: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 3 with properties: 
+pciBusID: 0000:40:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2023-09-12 02:21:22.314367: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.1
+2023-09-12 02:21:22.453956: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.10
+2023-09-12 02:21:22.454028: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.10
+2023-09-12 02:21:22.484709: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2023-09-12 02:21:22.486106: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2023-09-12 02:21:22.656331: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2023-09-12 02:21:22.688162: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.10
+2023-09-12 02:21:23.052559: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.7
+2023-09-12 02:21:23.054865: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0, 1, 2, 3
+2023-09-12 02:21:23.058771: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.1
+2023-09-12 02:21:27.774915: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2023-09-12 02:21:27.774968: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 1 2 3 
+2023-09-12 02:21:27.774977: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N Y Y Y 
+2023-09-12 02:21:27.774982: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 1:   Y N Y Y 
+2023-09-12 02:21:27.774988: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 2:   Y Y N Y 
+2023-09-12 02:21:27.774993: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 3:   Y Y Y N 
+2023-09-12 02:21:27.780229: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 60 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-12GB, pci bus id: 0000:3d:00.0, compute capability: 6.0)
+2023-09-12 02:21:27.787713: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:1 with 60 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-12GB, pci bus id: 0000:3e:00.0, compute capability: 6.0)
+2023-09-12 02:21:27.788568: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:2 with 60 MB memory) -> physical GPU (device: 2, name: Tesla P100-PCIE-12GB, pci bus id: 0000:3f:00.0, compute capability: 6.0)
+2023-09-12 02:21:27.789397: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:3 with 60 MB memory) -> physical GPU (device: 3, name: Tesla P100-PCIE-12GB, pci bus id: 0000:40:00.0, compute capability: 6.0)
+2023-09-12 02:21:27.790322: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2023-09-12 02:21:27.790683: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:3d:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2023-09-12 02:21:27.790969: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 1 with properties: 
+pciBusID: 0000:3e:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2023-09-12 02:21:27.791250: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 2 with properties: 
+pciBusID: 0000:3f:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2023-09-12 02:21:27.791522: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 3 with properties: 
+pciBusID: 0000:40:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2023-09-12 02:21:27.791544: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.1
+2023-09-12 02:21:27.791570: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.10
+2023-09-12 02:21:27.791581: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.10
+2023-09-12 02:21:27.791591: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2023-09-12 02:21:27.791601: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2023-09-12 02:21:27.791615: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2023-09-12 02:21:27.791626: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.10
+2023-09-12 02:21:27.791637: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.7
+2023-09-12 02:21:27.793716: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0, 1, 2, 3
+2023-09-12 02:21:27.793763: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2023-09-12 02:21:27.793771: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 1 2 3 
+2023-09-12 02:21:27.793778: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N Y Y Y 
+2023-09-12 02:21:27.793783: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 1:   Y N Y Y 
+2023-09-12 02:21:27.793789: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 2:   Y Y N Y 
+2023-09-12 02:21:27.793795: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 3:   Y Y Y N 
+2023-09-12 02:21:27.795206: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:0 with 60 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-12GB, pci bus id: 0000:3d:00.0, compute capability: 6.0)
+2023-09-12 02:21:27.795487: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:1 with 60 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-12GB, pci bus id: 0000:3e:00.0, compute capability: 6.0)
+2023-09-12 02:21:27.795771: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:2 with 60 MB memory) -> physical GPU (device: 2, name: Tesla P100-PCIE-12GB, pci bus id: 0000:3f:00.0, compute capability: 6.0)
+2023-09-12 02:21:27.796038: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/device:GPU:3 with 60 MB memory) -> physical GPU (device: 3, name: Tesla P100-PCIE-12GB, pci bus id: 0000:40:00.0, compute capability: 6.0)
+Default GPU Device: /device:GPU:0
